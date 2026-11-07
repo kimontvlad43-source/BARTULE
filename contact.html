@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - "BARTULE"</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+  
+  <img src="machine.png" alt="Швейная машинка" class="brand-icon-img me-2">
+  
+  <div class="brand-titles">
+    <span class="studio-subtitle">Студия вышивки</span>
+    <span class="logo-text">
+      "<span class="text-dark-part">B</span><span class="text-red-part">ART</span><span class="text-dark-part">ULE</span>"
+    </span>
+  </div>
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">О студии</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <h2 class="section-title text-center">Свяжитесь с нами</h2>
+        
+        <div class="row">
+            <div class="col-md-8 mb-4">
+                <div class="contact-form">
+                    <h4 class="mb-4">Оставить заявку</h4>
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">Имя</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Фамилия / Компания</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Тип изделия (например, худи, кепка)</label>
+                            <input type="text" class="form-control" id="subject" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Опишите задачу (тираж, размер вышивки)</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-pink">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="contact-info">
+                    <h4 class="mb-4">Наши контакты</h4>
+                    
+                    <div class="mb-4">
+                        <p><i class="fas fa-envelope contact-icon"></i>Email: kimont@yandex.ru</p>
+                        <p><i class="fas fa-phone contact-icon"></i>Телефон: +7 (913) 123-45-67</p>
+                        <p><i class="fas fa-map-marker-alt contact-icon"></i>Адрес: г. Стрежевой, ул. Строителей, д. 5</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5>Мы в соцсетях</h5>
+                        <div class="d-flex mt-3">
+                            <a href="#" class="me-3 social-link">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="me-3 social-link">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="#" class="me-3 social-link">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p>Контакты: kimont@yandex.ru | Телефон: +7 (913) 123-45-67</p>
+        <p>&copy; 2026 Студия машинной вышивки "BARTULE"</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
