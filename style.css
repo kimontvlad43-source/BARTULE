@@ -465,3 +465,94 @@ footer p { margin: 0; font-size: 0.9rem; }
   
   .carousel-item { height: 350px; }
 }
+
+/* =========================================
+   Всплывающая подсказка (Tooltip) с картинкой
+   ========================================= */
+.tooltip-container {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Окно */
+.tooltip-content {
+  position: absolute;
+  bottom: 105%; 
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 250px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-top: 4px solid var(--accent-color);
+  border-radius: 4px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Стрелочка внизу */
+.tooltip-content::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+/* Картинка */
+.tooltip-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+/* Заголовок и текст */
+.tooltip-content h6 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.tooltip-content p {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Эффект при наведении */
+.tooltip-container:hover .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Чтобы ховер не перекрашивал плашку в красный */
+.tooltip-container:hover {
+  background-color: #fafafa;
+  color: var(--primary-color);
+  border-color: var(--border-color);
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 576px) {
+  .tooltip-content {
+    width: 200px;
+    padding: 10px;
+  }
+  .tooltip-img {
+    height: 100px;
+  }
+}
