@@ -576,3 +576,41 @@ footer p { margin: 0; font-size: 0.9rem; }
     height: 100px;
   }
 }
+/* =========================================
+   Исправление сетки "Процесс создания"
+   ========================================= */
+.city-detail-grid {
+  display: grid;
+  /* Левая колонка занимает 1.5 части, правая - 1 часть */
+  grid-template-columns: 1.5fr 1fr; 
+  gap: 30px;
+  align-items: start; /* Выравниваем по верхнему краю */
+  margin-bottom: 30px;
+}
+
+/* Настройка картинки, чтобы она не сплющивалась */
+.map-image-container {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background: white;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  min-height: 250px; /* Чтобы блок не был слишком маленьким */
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+/* На мобильных телефонах ставим колонки друг под другом */
+@media (max-width: 768px) {
+  .city-detail-grid {
+    grid-template-columns: 1fr; /* Одна колонка */
+  }
+}
